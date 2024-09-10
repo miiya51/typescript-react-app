@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -13,11 +13,15 @@ function App() {
 }
 
 function LikeButton() {
-  const [count, setCount] = useState(999);
+  const [count, setCount] = useState(0);
   const handleClick = () => {
     setCount(count + 1);
   };
-  return <span className="likeButton" onClick={handleClick}>♥ {count}</span>;
+  return (
+    <span className="likeButton" onClick={handleClick}>
+      ♥ {count}
+    </span>
+  );
 }
 
 export default App;
