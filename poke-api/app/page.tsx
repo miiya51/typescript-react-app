@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { GetServerSideProps, NextPage } from "next";
+import styles from './page.module.css';
 
 const fetchPokemon = async () =>{
   const index = Math.floor(Math.random() * 905 + 1);
@@ -40,7 +41,7 @@ const IndexPage : NextPage<IndexPageProps> = (props: IndexPageProps) => {
 
   return (
     <div>
-      <button onClick={handleClick}>チェンジ</button>
+      <button className={styles.button} onClick={handleClick}>チェンジ</button>
       <div>
         <img src={pokemonImageUrl}/>  
         <p>{pokemonID} {pokemonName}</p>
