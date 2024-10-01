@@ -44,7 +44,7 @@ const IndexPage : NextPage<IndexPageProps> = (props: IndexPageProps) => {
       <button className={styles.button} onClick={handleClick}>チェンジ</button>
       <div>
         <img src={pokemonImageUrl}/>  
-        <p>{pokemonID} {pokemonName}</p>
+        <p className="mt-10 text-5xl underline underline-offset-4">{pokemonID} {pokemonName}</p>
       </div>
     </div>
   );
